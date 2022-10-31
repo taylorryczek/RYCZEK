@@ -8,9 +8,18 @@ function submitForm (name, hometown) {
   var guestlist = document.getElementById("guestlist");
   var n = document.getElementById("name");
   var h = document.getElementById("hometown");
-  guestlist.innerHTML += "<li>" + name + ". " + hometown + "<li">
+  guestlist.innerHTML += "<li>" + name + ". " + hometown + "<li>";
     n.value = "";
   h.vallue = "";
   n.focus();
+  return false;
+}
+
+function submitAnswer(answer) {
+  // search the DOM for a specific tag with the id "guestlist"
+  var answerlist = document.getElementById("answerlist");
+  answerlist.innerHTML += answer.value + "<br />";
+  answer.value = "";
+  answer.focus();
   return false;
 }
