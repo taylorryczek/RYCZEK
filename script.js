@@ -17,14 +17,15 @@ function submitForm (name, hometown) {
 
 function checkStorage() {
  var answerlist = document.getElementById("answerlist");
-  var currentanswers = localStorage.getITem("answerlist");
+  var currentanswers = localStorage.getItem("answerlist");
   answerlist.innerHTML = currentanswers;
 }
 
 function submitAnswer(answer) {
   // search the DOM for a specific tag with the id "answerlist"
   var answerlist = document.getElementById("answerlist");
-  localStorage.setitem("answerlist", answer.value);
+  var currentanswers = localStorage.getItem("answerlist");
+  localStorage.setItem("answerlist", answer.value);
   answerlist.innerHTML += answer.value + "<br />";
   answer.value = "";
   answer.focus();
