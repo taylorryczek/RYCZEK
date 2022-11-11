@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>guestbook</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1>sign our guestbook</h1>
+     <form action="#" onsubmit="return submitForm(this.name.value, this.hometown.value);">
+    <label>Name:</label>
+    <input id="name" /><br />
+    <label>Hometown:</label>
+    <input id="hometown" /><br />
+    <input type="submit" />
+  </form>
+    <h2>Guest List</h2>
+    <ol id= "guestlist">
+      <!-- Example hard-coded data
+      <li>Brian Tooone. Birmingham, Alabama</li>
+      <li>John Smith. Memphis, Tennessee</li>
+      -->
+    </ol>
+      <a href="index.html">Return to home page</a>
+    <script src="script.js"></script>
+  </body>
+
+</html>
