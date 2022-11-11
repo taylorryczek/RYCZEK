@@ -15,6 +15,12 @@ function submitForm (name, hometown) {
   return false;
 }
 
+function clearStorage() {
+  var answerlist = document.getElementById("answerlist");
+  answerlist.innerHTML = "";
+  localStorage.setItem("answerlist","");
+}
+
 function checkStorage() {
  var answerlist = document.getElementById("answerlist");
   var currentanswers = localStorage.getItem("answerlist");
@@ -31,3 +37,5 @@ function submitAnswer(answer) {
   answer.focus();
   return false;
 }
+
+<a href="#" onclick="clearStorage(); return false;">reset answers</a>
